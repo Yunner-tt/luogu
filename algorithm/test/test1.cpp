@@ -12,7 +12,7 @@ int main()
     // cout << setprecision(20) << x / y << endl;
     // cout << setprecision(20) << i << endl;
     // cout << setprecision(20) << j << endl;
-    // cout << system("pause");
+    // cout << setprecision(20) << c << endl;
     system("pause");
     return 0;
 }
