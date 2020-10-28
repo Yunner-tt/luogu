@@ -29,9 +29,9 @@
 >> ```
 >> 
 
->> ### `tranfrom(input.begin(), input.end(), input.begin(), ::tolower)`
+>> ### `transform(input.begin(), input.end(), input.begin(), ::tolower)`
 >>  这是c++ STL string里面的函数，里面其中input是Stirng类型(小声bb，其实也是调用上面的操作)<br>
->> `string ss`<br>`tranfrom(input.begin(), input.end(), input.begin(), ::tolower)`
+>> `string input`<br>`transform(input.begin(), input.end(), input.begin(), ::tolower)`
 >> 
 ---
 > ## 杂项
