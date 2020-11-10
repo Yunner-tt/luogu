@@ -9,60 +9,61 @@ int main()
     string ss;
     while (1)
     {
-        ss = "";
-        p = 0;
+        ss = "";p = 0;
         for (int i = 0; i < 3; ++i)
         {
             var[i] = 0;
             var_string[i] = "";
         }
-        cout << "Please enter data:";
+        cout << "Õˆİ”Èë:";
         getline(cin, ss);
         stringstream ssteam(ss);
-        while (ssteam >> var[p])
-            ++p;
-        if (p != 3) //æé†’è¾“å…¥ä¸å…¨(è¿™é‡Œæ˜¯ä¸¤ç§æƒ…å†µï¼Œè¾“å…¥ä¸å…¨ï¼Œæˆ–è€…è¾“å…¥éæ•°å­—ï¼Œçœ‹çœ‹ç­‰ä¸‹è¿˜èƒ½æ”¹å—)
+        while (ssteam >> var[p]) ++p;
+        if (p != 3){
+            cout<<"İ”³ö²»×ã»òÕßİ”³ö²»ÊÇ”µ×Ö"<<endl;
             continue;
+        }
+
         for (int i = 0; i < 3; ++i)
         {
             ssteam.clear();
-            ssteam.str("");
+            ssteam.str(std::string());
             ssteam << var[i];
             var_string[i] = ssteam.str();
         }
         if (ss[0] != ' ' && fun(ss, var_string[0], var_string[1]) && fun(ss, var_string[1], var_string[2]))
         {
-            if ((var[0] < 0 || var[0] > 100) || (var[1] < 0 || var[1] > 100) || (var[2] < 0 || var[2] > 100))
+            if ((var[0] <= 0 || var[0] > 100) || (var[1] <= 0 || var[1] > 100) || (var[2] <= 0 || var[2] > 100))
             {
-                //æé†’æ•°çš„å¤§å°ä¸å¯¹
+                cout<<"ÊäÈëÊı×Ö³¬³öÔ¤¶¨·¶Î§"<<endl;
                 continue;
             }
             else
             {
                 if (var[0] + var[1] > var[2] && var[0] + var[2] > var[1] && var[1] + var[2] > var[0])
                 {
-                    if (var[0] == var[1] == var[2])
+                    if (var[0] == var[1] && var[1] == var[2] && var[0] == var[2])
                     {
-                        cout << "is Equilateral Triangle" << endl;
+                        cout << "µÈ±ßÈı½ÇĞÎ" << endl;
                     }
                     else if (var[0] == var[1] || var[1] == var[2] || var[0] == var[2])
                     {
-                        cout << "is Isosceles Triangle" << endl;
+                        cout << "µÈÑüÈı½ÇĞÎ" << endl;
                     }
                     else
                     {
-                        cout << "is Normal Triangle" << endl;
+                        cout << "ÆÕÍ¨Èı½ÇĞÎ" << endl;
                     }
                 }
                 else
                 {
-                    cout << "isn`t Triangle" << endl;
+                    cout << "²»¹¹³ÉÈı½ÇĞÎ" << endl;
                 }
             }
         }
         else
         {
-            //è¿™é‡Œä¹Ÿæ˜¯è¾“å…¥ç¼ºå°‘
+            cout<<"İ”Èë¸ñÊ½²»Œ¦£¬(Õˆ²»ÒªÊ×ĞĞ¿Õ¸ñ)"<<endl;
             continue;
         }
     }
