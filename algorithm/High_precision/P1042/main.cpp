@@ -1,41 +1,44 @@
 #include <bits/stdc++.h>
 using namespace std;
-
 int main()
 {
-    // int n = 7000;
-    // int **arr = NULL;
-    // arr = (int **)malloc(sizeof(int *) * n);
-    // for (int i = 0; i < n; ++i)
-    // {
-    //     arr[i] = (int *)malloc(sizeof(int) * n);
-    // }
-    // for (int i = 0; i < n; ++i)
-    // {
-    //     for (int j = 0; j < n; ++j)
-    //     {
-    //         arr[i][j] = 4;
-    //     }
-    // }
-    // for (int i = 0; i < n; ++i)
-    // {
-    //     for (int j = 0; j < n; ++j)
-    //     {
-    //         cout<<arr[i][j]<<endl;
-    //     }
-    // }
-    // if (arr == NULL)
-    // {
-    //     cout << "ÎÒÊÇ¿ÕµÄ" << endl;
-    // }
-    // delete[] arr;
-    int *a = (int*)malloc(sizeof(int)*100);
-    for(int i=0;i<100;++i){
-        a[i]=5;
+    int a = 0, b = 0, p = 0;
+    char *content = new char[62501];
+    char tmp;
+    while (tmp = getchar())
+    {
+        if (tmp == 'E')
+            break;
+        if (tmp == '\n' || tmp == ' ')
+            ;
+        else if (tmp == 'W' || tmp == 'L')
+            content[p++] = tmp;
     }
-    // memset(a,0,sizeof(a));
-    for(int i=0;i<100;++i){
-        cout<<a[i]<<endl;
+    ++p;
+    for (int i = 0; i < p; ++i)
+    {
+        if (content[i] == 'W')
+            ++a;
+        else if(content[i] == 'L')
+            ++b;
+        if (((a >= 11 || b >= 11) && abs(a - b) >= 2) || i == p - 1)
+        {
+            cout << a << ":" << b << endl;
+            a = b = 0;
+        }
+    }
+    cout<<endl;
+    for (int i = 0; i < p; ++i)
+    {
+        if (content[i] == 'W')
+            ++a;
+        else if(content[i] == 'L')
+            ++b;
+        if (((a >= 21 || b >= 21) && abs(a - b) >= 2) || i == p - 1)
+        {
+            cout << a << ":" << b << endl;
+            a = b = 0;
+        }
     }
     system("pause");
     return 0;
