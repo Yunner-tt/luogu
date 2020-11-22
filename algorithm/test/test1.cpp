@@ -13,6 +13,19 @@ int main()
     // cout << setprecision(20) << i << endl;
     // cout << setprecision(20) << j << endl;
     // cout << setprecision(20) << c << endl;
+    string ss[10];
+    for (int i = 0; i < 10; ++i)
+    {
+        ss[i] = "sd";
+    }
+    for (int i = 0; i < 10; ++i)
+    {
+        ss[i] = "sd";
+    }
+    for (int i = 0; i < 10; ++i)
+    {
+        cout << ss[i] << endl;
+    }
     system("pause");
     return 0;
 }
