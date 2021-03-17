@@ -1,3 +1,4 @@
+
 #include <bits/stdc++.h>
 using namespace std;
 int main()
@@ -18,23 +19,25 @@ int main()
     {
         int x, y, r, z;
         cin >> x >> y >> r >> z;
-        if (z==0)                                                                                                                                                                                                                                                                                              
-        {
-            for (int i = x - r; i <= x + r; ++i)
+        if(r!=0){
+            if (z==0)                                                                                                                                                                                                                                                                                              
             {
-                for (int j = y - r; j <= y + r; ++j)
+                for (int i = x - r; i <= x + r; ++i)
                 {
-                    result[j-y+x][x+y-i] = content[i][j];
+                    for (int j = y - r; j <= y + r; ++j)
+                    {
+                        result[x+j-y][x+y-i] = content[i][j];
+                    }
                 }
             }
-        }
-        else
-        {
-            for (int i = x - r; i <= x + r; ++i)
+            else
             {
-                for (int j = y - r; j <= y + r; ++j)
+                for (int i = x - r; i <= x + r; ++i)
                 {
-                    result[x+y-j][i-y+x] = content[i][j];
+                    for (int j = y - r; j <= y + r; ++j)
+                    {
+                        result[x+y-j][y+i-x] = content[i][j];
+                    }
                 }
             }
         }
@@ -57,3 +60,12 @@ int main()
     system("pause");
     return 0;
 }
+/*这道转置是整体中含部分的转置，与全部转置的想法有所不同
+对于顺时针:
+转置后的y与转置前的x有关，y=xo+yo-x;
+转置后的x与转置前的y有关，x=xo-yo+y;
+对于逆时针:
+转置后的y与转置前的x有关，y=yo-xo+x;
+转置后的x与转置前的y有关，x=xo+yo-y;
+需要注意注意注意!!!!!!!!!!
+*/
