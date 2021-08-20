@@ -2,7 +2,7 @@
 using namespace std;
 char m[12][12];
 int cx, cy, fx, fy, time_ = 0;
-int turn_c = 0, turn_f = 0; //åŒ—:0,ä¸œ:1,å—:2,è¥¿:3
+int turn_c = 0, turn_f = 0; //åŒ?:0,ä¸?:1,å?:2,è¥?:3
 bool meet = false;
 void move(int &x, int& y, int& turn)
 {
