@@ -2,13 +2,48 @@
     "tasks": [
         {
             "type": "shell",
-            "label": "C/C++: g++.exe build active file",
+            "label": "PreBuild",
+            "command": "mkdir",
+            "args": [
+                "-p",
+                "${workspaceFolder}\\bin\\${relativeFileDirname}"
+            ],
+            "windows": {
+                "options": {
+                    "shell": {
+                        "executable": "powershell.exe"
+                    }
+                },
+                "args": [
+                    "-Force",
+                    "${workspaceFolder}\\bin\\${relativeFileDirname}"
+                ]
+            },
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "presentation": {
+                "echo": false,
+                "reveal": "silent",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": false,
+                "clear": false
+            }
+        },
+        {
+            "type": "shell",
+            "label": "Build",
+            "dependsOn": "PreBuild",
             "command": "G:\\study\\mingw64\\bin\\g++.exe",
             "args": [
+                "${fileDirname}\\*.cpp",
                 "-g",
-                "${file}",
                 "-o",
-                "${fileDirname}\\${fileBasenameNoExtension}.exe"
+                "${workspaceFolder}\\bin\\${relativeFileDirname}\\${fileBasenameNoExtension}.exe",
             ],
             "options": {
                 "cwd": "${workspaceFolder}"
