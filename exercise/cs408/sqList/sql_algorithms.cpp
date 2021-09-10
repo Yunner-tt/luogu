@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-#include "sql_meth.h"
+#include "sql_algorithms.h"
 //Ë³Ðò±í×ªÖÃ
 void inverse(SqList& L){
     int low = 0, height = L.length-1;

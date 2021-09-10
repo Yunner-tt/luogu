@@ -1,5 +1,5 @@
-#ifndef Sqlist_H
-#define Sqlist_H
+#ifndef _Sqlist_H_
+#define _Sqlist_H_
 
 #define MaxSize 30
 #define ElemType int

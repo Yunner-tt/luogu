@@ -1,5 +1,5 @@
-#ifndef _Sqlist_H_
-#define _Sqlist_H_
+#ifndef _Linklist_H_
+#define _Linklist_H_
 
 //定义顺序表结构及相关算法函数声明
 

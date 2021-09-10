@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-#include "sql_meth.h"
+#include "sql_algorithms.h"
 
 int main()
 {

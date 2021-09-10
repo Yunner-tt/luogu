@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "sql.h"
+#include "linkList.h"
 int main()
 {
 	int *s;
