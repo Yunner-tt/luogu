@@ -1,15 +1,6 @@
-#include"stdlib.h"
-
-typedef struct ax
-{
-    int a;
-    char g;
-};
-typedef struct bx
-{
-    struct ax *ss;
-};
+#include"stdio.h"
 
 int main(){
-
+	printf("hello world!!");
+	return 0;
 }

@@ -30,6 +30,7 @@ bool InsertNode(BiTree T, ElemType val, bool LF)
     ; //错误代码
   return LF;
 }
+
 //先序创建二叉树
 void CreateBiTree(BiTree &T)
 {
@@ -51,6 +52,7 @@ void visit(BiTree T)
 {
   printf("%c", T->data.value);
 }
+
 //中序遍历
 void InOrderTraverse(BiTree T)
 {
@@ -61,6 +63,7 @@ void InOrderTraverse(BiTree T)
     InOrderTraverse(T->rchild);
   }
 }
+
 //先序遍历
 void PreOrderTraverse(BiTree T)
 {
@@ -71,6 +74,7 @@ void PreOrderTraverse(BiTree T)
     PreOrderTraverse(T->rchild);
   }
 }
+
 //后序遍历
 void PostOrderTraverse(BiTree T)
 {
@@ -81,6 +85,7 @@ void PostOrderTraverse(BiTree T)
     visit(T);
   }
 }
+
 //层次遍历
 void levelOrder(BiTree T)
 {
@@ -96,6 +101,7 @@ void levelOrder(BiTree T)
     free(temp);
   }
 }
+
 //队列初始化
 void InitQueue(LinkQueue &Q)
 {
@@ -103,6 +109,7 @@ void InitQueue(LinkQueue &Q)
   //初始化时，front 、rear 都指向头节点
   Q.front->next = NULL;
 }
+
 //入队（rear始终指向数据元素）
 bool EnQueue(LinkQueue &Q, BiTNode *x)
 {
@@ -115,6 +122,7 @@ bool EnQueue(LinkQueue &Q, BiTNode *x)
   Q.rear = s;
   return true;
 }
+
 //出队（front始终指向数据元素前一个元素）
 bool DeQueue(LinkQueue &Q, BiTNode *x)
 {
