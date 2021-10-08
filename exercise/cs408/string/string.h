@@ -4,7 +4,7 @@
 #define Bool bool
 
 //×Ö·û´®½á¹¹Ìå
-typedef struct
+typedef struct String
 {
   char data[MaxSize];
   int length;
